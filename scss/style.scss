@@ -1,0 +1,4 @@
+@import "../node_modules/bootstrap/scss/functions";   // 1. Bootstrap functions
+@import "../node_modules/bootstrap/scss/mixins";      // 2. Bootstrap mixins
+@import "variables";                                  // 3. Your overrides
+@import "../node_modules/bootstrap/scss/bootstrap";   // 4. Full Bootstrap
