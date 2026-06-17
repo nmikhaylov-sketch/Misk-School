@@ -91,3 +91,36 @@
 }
 
 
+// :root {
+//   --margin-desktop: 9.375rem;
+//   --gutter-desktop: 1.875rem;
+//   --margin-tablet:  1.875rem;
+//   --gutter-tablet:  1.875rem;
+//   --margin-mobile:  0.9375rem;
+//   --gutter-mobile:  0.9375rem;
+// }
+
+// // Page wrapper
+// .page-wrapper {
+//   display: flex;
+//   width: 100%;
+//   max-width: 90rem;
+//   margin-inline: auto;
+//   padding: 0 var(--margin-desktop);
+//   justify-content: center;
+//   align-items: center;
+//   gap: var(--gutter-desktop);
+
+//   @include media-breakpoint-down(lg) {   // ≤ 991px → tablet
+//     max-width: 48rem;
+//     padding: 0 var(--margin-tablet);
+//     gap: var(--gutter-tablet);
+//   }
+
+//   @include media-breakpoint-down(sm) {   // ≤ 575px → mobile
+//     max-width: 23.4375rem;
+//     padding: 0 var(--margin-mobile);
+//     align-items: flex-start;
+//     gap: var(--gutter-mobile);
+//   }
+// }
