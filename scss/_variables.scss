@@ -14,6 +14,8 @@ $alert-warning: #FFCD39!default;
 $alert-error:  #B02A37 !default;
 
 
+$body-color: #111;
+
 //------------------Typography--------------------
 
 
@@ -44,3 +46,11 @@ $headings-line-height: 1.4;
 
 // Hero Title
 
+// $spacers: (
+//   0: 0,
+//   1: $spacer * .25,
+//   2: $spacer * .5,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// ) !default;
