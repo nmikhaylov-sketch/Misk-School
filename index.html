@@ -10,38 +10,58 @@
   </head>
   <body>
     <div class="container">
-        <div id="heroSlide" class="carousel slide"> 
-            <div class="carousel-arrows">
-                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/Test.avif" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="hero-caption">Test Caption 1</h1>
-                    </div>
+        <div class="row position-relative">
+            <div id="heroSlide" class="carousel slide"> 
+                <div class="carousel-indicators col-md-3">
+                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                    <img src="img/Test.avif" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="hero-caption">Test Caption 2</h1>
+                <div class="carousel-inner text-start px-10">
+                    <div class="carousel-item active">
+                        <img src="img/main.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption col-md-3">
+                            <h1 class="carousel-title start-0">Test Caption 1</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Test.avif" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="hero-caption">Test Caption 3</h1>
+    
+                    <div class="carousel-item">
+                        <img src="img/main.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption col-6">
+                            <h1>Setting Trends for a Nation on the Move</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/main.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption col-md-6">
+                            <h1>Test Caption 3</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-
-        <h1></h1>
-
+        <div class="row justify-content-center mx-0 py-5">
+            <div class="container col-12 col-md-8 bg-primary  text-white rounded-4 text-center ">
+                <h1 class="text-centers py-4 fw-bold">At a Glance</h1>
+                <div class="row row-cols-1 row-cols-md-3 g-5">
+                    <div class="col-md-4">
+                        <h1 class="fw-bold">9</h1>
+                        <p class="py-md-3">School Buildings</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="fw-bold">15</h1>
+                        <p class="py-md-3">Students Max Class Sizes</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="fw-bold">100+</h1>
+                        <p class="py-md-3">Co-curricular Activities</p>
+                    </div>
+                </div>
+            </div>
     </div>
+    </div>
+   
+  
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
