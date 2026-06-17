@@ -1,2 +1,46 @@
+// ----------------Colors--------------------
+
 $primary:       #00372A !default;
+$primary-hover: #C2D500 !default;
+$seconary:     #D9E378 !default;
+$secondary-hover: #21B592 !default;
+$tertiary:     #E4ECEA !default;
+$tertiary-hover: #DBEAE6 !default;
+
+// ----alert colors
+$alert-success: #198754 !default;
+$alert-info:    #0DCAF0!default;
+$alert-warning: #FFCD39!default;
+$alert-error:  #B02A37 !default;
+
+
+//------------------Typography--------------------
+
+
+$font-family-base: 'Codec', sans-serif;
+$font-size-base: 1rem;  
+
+// Display
+$display-1-size: 3.75rem;
+$display-2-size: 3rem;
+$display-3-size: 2.375rem;
+$display-4-size: 1.875rem;
+$display-5-size: 1.5rem;;
+$display-6-size: 1.125rem;
+
+// Headings
+$h1-font-size:  4.75rem;
+$h2-font-size:  2.5rem;
+$h3-font-size:  1.25rem;
+$h4-font-size:  1.4375rem;
+$h5-font-size:  1.25rem;
+$h6-font-size:  1rem;
+
+// font weights
+$display-font-weight: 600;
+$headings-font-weight: 600;
+$headings-line-height: 1.4;
+
+
+// Hero Title
 
