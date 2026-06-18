@@ -1,7 +1,7 @@
 // ----------------Colors--------------------
 
 $primary:       #00372A !default;
-// $primary-emphasis: #C2D500 !default;
+$primary-emphasis: #C2D500 !default;
 $secondary:     #D9E378 !default;
 // $secondary-emphasis: #21B592 !default;
 $tertiary:     #E4ECEA !default;
@@ -12,6 +12,12 @@ $alert-success: #198754 !default;
 $alert-info:    #0DCAF0!default;
 $alert-warning: #FFCD39!default;
 $alert-error:  #B02A37 !default;
+$alert-warning: #FFCD39!default;
+$alert-error:  #B02A37 !default;
+
+.text-primary-emphasis { color: $primary-emphasis !important; }
+.bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+
 
 
 //------------------Typography--------------------
@@ -52,3 +58,4 @@ $headings-line-height: 1.4;
 //   4: $spacer * 1.5,
 //   5: $spacer * 3,
 // ) !default;
+

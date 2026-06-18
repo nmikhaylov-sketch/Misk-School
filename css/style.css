@@ -17,6 +17,14 @@
   font-weight: 400;
   font-style: italic;
 }
+.text-primary-emphasis {
+  color: #C2D500 !important;
+}
+
+.bg-primary-emphasis {
+  background-color: #C2D500 !important;
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -11889,6 +11897,10 @@ textarea.form-control-lg {
   .hero-body {
     font-size: 1.125;
   }
+}
+
+.h-hero {
+  height: 34.4rem;
 }
 
 .quote {

@@ -22,7 +22,7 @@
 
 @import "../node_modules/bootstrap/scss/functions";   // 1. Bootstrap functions
 @import "variables";                                  // 2. Your variables overrides                       
-@import "../node_modules/bootstrap/scss/bootstrap";   // 4. Full Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";   // 3. Full Bootstrap
 
 .hero-title {
   font-size: 4.25rem;
@@ -44,6 +44,8 @@
     font-size: 1.125; // your mobile value
   }
 }
+
+.h-hero { height: 34.4rem; }
 
 // Quote
 .quote {
@@ -89,6 +91,7 @@
   h5 { font-size: 1.125rem; }
   h6 { font-size: 0.875rem; }
 }
+
 
 
 // :root {
