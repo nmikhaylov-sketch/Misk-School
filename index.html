@@ -9,62 +9,130 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="container-fluid position-relative p-0">
+        <!-- ---------------header--------------------- -->
+        <nav class="navbar position-absolute z-3 top-0 end-0 pt-0">
+            <div class="row w-100">
+                <div class="d-flex align-items-start p-3 justify-content-between">
 
-    <!-- ---------------Hero Slide----------------- -->
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/Type=Light.svg" class="z-3">
+                    </a>
 
-    <div class="container">
-        <div class="row position-relative">
-            <div id="heroSlide" class="carousel slide"> 
-                <div class="carousel-indicators col-md-3">
-                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button class="navbar-toggler rounded-bottom-5 bg-primary-emphasis" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse position-absolute top-0 end-0 bg-primary z-2" id="toggleTarget">
+                    <div class="d-flex flex-column h-100 p-3">
+
+                        <button class="btn border-0 bg-transparent p-0 lh-1 fs-1 ms-auto"
+                                style="--bs-btn-color: white; --bs-btn-hover-color: white;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#toggleTarget"
+                                aria-label="Close menu">
+                        &times;
+                        </button>
+
+                        <ul class="navbar-nav px-4 pt-4">
+
+                            <li class="nav-item">
+                            <a class="nav-link text-white fs-2 fw-semibold" href="#">About Us</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Admissions <span class="text-secondary">▾</span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Learning Journey <span class="text-secondary">▾</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Work With Us <span class="text-secondary">▾</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            </ul>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-                <div class="carousel-inner text-start px-10">
-                    <div class="carousel-item active">
-                        <img src="img/main.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption col-md-3">
-                            <h1 class="fw-bold start-0">Test Caption 1</h1>
-                        </div>
-                    </div>
-    
-                    <div class="carousel-item">
-                        <img src="img/main.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption col-6">
-                            <h1>Setting Trends for a Nation on the Move</h1>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/main.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption col-md-6">
-                            <h1>Test Caption 3</h1>
-                        </div>
+            </div>
+        </nav>
+
+        <!-- ---------------Hero Slide----------------- -->
+
+        <div id="heroSlide" class="carousel slide"> 
+            <div class="carousel-indicators flex justify-content-start ms-5">
+                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner text-start">
+                <div class="carousel-item active">
+                    <img src="../img/main.jpg" class="w-100 h-hero object-fit-cover" alt="...">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+                    <div class="carousel-caption text-start start-0 bottom-0 ps-5 pb-5">
+                        <h1 class="hero-title">Setting Trends for a Nation on the Move </h1>
                     </div>
                 </div>
+
+                <div class="carousel-item">
+                    <img src="../img/main.jpg" class="w-100 h-hero object-fit-cover" alt="...">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+                    <div class="carousel-caption text-start start-0 bottom-0 ps-5 pb-5">
+                        <h1 class="hero-title">Setting Trends for a Nation on the Move </h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/main.jpg" class="w-100 h-hero object-fit-cover" alt="...">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+                    <div class="carousel-caption text-start start-0 bottom-0 ps-5 pb-5">
+                        <h1 class="hero-title">Setting Trends for a Nation on the Move </h1>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <!-- ---------------Stat Card----------------- -->
-
-        <div class="row justify-content-center mx-0 py-5">
-            <div class="container col-12 col-md-10 bg-primary  text-white rounded-4 text-center ">
-                <h1 class="text-centers py-4 fw-bold">At a Glance</h1>
-                <div class="row row-cols-1 row-cols-md-3 g-5">
-                    <div class="col-md-4">
-                        <h1 class="fw-bold">9</h1>
-                        <p class="py-md-3">School Buildings</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h1 class="fw-bold">15</h1>
-                        <p class="py-md-3">Students Max Class Sizes</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h1 class="fw-bold">100+</h1>
-                        <p class="py-md-3">Co-curricular Activities</p>
-                    </div>
-                </div>
-            </div>
     </div>
+
+    <!-- ---------------Stat Card----------------- -->
+
+    <div class="container stat-card d-flex flex-column align-items-center bg-primary text-white mt-5 rounded-4">
+        <p class="h2 py-4 fw-bold">At a Glance</p>
+        <div class="stat-row d-flex justify-content-center w-100">
+
+            <div class="stat-col d-flex flex-column text-center aligh-items-center">
+                <p class="display-1 text-primary-emphasis fw-bold mb-0">A</p>
+                <p class="mb-0">School Buildings</p>
+            </div>
+
+            <div class="stat-col d-flex flex-column text-center aligh-items-center">
+                <p class="display-1 text-primary-emphasis fw-bold">BC</p>
+                <p class="mb-0">Students Max Class Sizes</p>
+            </div>
+
+            <div class="stat-col d-flex flex-column text-center aligh-items-center">
+                <p class="display-1 text-primary-emphasis fw-bold">DEF+</p>
+                <p class="mb-0">Co-curricular Activities</p>
+            </div>
+        </div>
     </div>
    
   

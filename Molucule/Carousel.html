@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Featured News</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h2 class="featured-news-title">Featured News</h2>
+    <div class="center">
+    </div>
+
+    <div class="news-arrows">
+        <button class="news-prev" aria-label="Previous slide">&#8592;</button>
+        <button class="news-next" aria-label="Next slide">&#8594;</button>
+    </div>
+
+    <button class="see-all-btn">See All News</button>
+
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+<script>
+
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+			
+//   $(document).ready(function() {
+//     var $slider = $('.news-slider');
+//     var smallW = 360;
+//     var largeW = 750;
+
+//     // Set widths via JS before slick init — no inline styles allowed
+//     $slider.children().width(smallW);
+//     $slider.children().first().width(largeW);
+
+//     $slider.slick({
+//       centerMode: true,
+//       variableWidth: true,
+//       infinite: true,
+//       speed: 400,
+//       arrows: false,
+//     });
+
+//     // Wire custom buttons — avoids conflict with slick's own arrow CSS
+//     $('.news-prev').on('click', function() { $slider.slick('slickPrev'); });
+//     $('.news-next').on('click', function() { $slider.slick('slickNext'); });
+
+//     $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+//       $(slick.$slides.get(currentSlide)).width(smallW);
+//       $(slick.$slides.get(nextSlide)).width(largeW);
+//       $(this).slick('setPosition');
+//     });
+//   });
+</script>
+
+</body>
+</html>
