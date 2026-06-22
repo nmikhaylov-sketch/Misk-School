@@ -15164,40 +15164,21 @@ textarea.form-control-lg {
   background-color: #C2D500 !important;
 }
 
-.featured-news-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #212529;
-  text-align: center;
-  margin: 0;
-  line-height: 1.4;
-}
-
-.section-margin {
-  margin-top: 3.125;
-}
-@media (min-width: 768px) {
-  .section-margin {
-    margin-top: 6.25;
-  }
-}
-
-.item-margin-1 {
-  margin-top: 1.875;
-}
-@media (min-width: 768px) {
-  .item-margin-1 {
-    margin-top: 3.125;
-  }
-}
-
-.item-margin-2 {
-  margin-top: 1.25;
-}
-@media (min-width: 768px) {
-  .item-margin-2 {
-    margin-top: 1.875;
-  }
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #00372A;
+  --bs-btn-border-color: #00372A;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #C2D500;
+  --bs-btn-hover-border-color: #C2D500;
+  --bs-btn-focus-shadow-rgb: 38, 85, 74;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(0, 44, 33.6);
+  --bs-btn-active-border-color: rgb(0, 41.25, 31.5);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #00372A;
+  --bs-btn-disabled-border-color: #00372A;
 }
 
 .news-image-wrap {
@@ -15210,6 +15191,7 @@ textarea.form-control-lg {
 }
 
 .news-date {
+  position: absolute;
   bottom: 1.25rem;
   left: 1.25rem;
 }
@@ -15227,33 +15209,27 @@ textarea.form-control-lg {
 }
 .news-arrows .slick-prev,
 .news-arrows .slick-next {
-  position: static !important;
   transform: none !important;
   width: 2.1875rem;
   height: 2.1875rem;
-  border-radius: 50%;
-  background: #00372A !important;
+  background-color: #00372A;
+  color: white;
+  border: none;
 }
 .news-arrows .slick-prev:before,
 .news-arrows .slick-next:before {
-  color: #fff;
-  font-size: 0.875rem;
-  opacity: 1;
+  content: none;
 }
-
-.stat-card {
-  padding: 3.125rem 1.875rem;
-  gap: 1.875rem;
+.news-arrows .slick-prev:hover,
+.news-arrows .slick-next:hover {
+  background-color: #C2D500;
 }
-
-.stat-row {
-  gap: 6.25rem;
-}
-@media (max-width: 767.98px) {
-  .stat-row {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
+.news-arrows .slick-prev img,
+.news-arrows .slick-next img {
+  width: 50%;
+  height: auto;
+  display: block;
+  filter: invert(1);
 }
 
 .stat-col {
