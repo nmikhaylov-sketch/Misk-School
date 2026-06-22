@@ -19,10 +19,32 @@
   font-style: italic;
 }
 
+$spacer: 1rem !default;  // ← add this line
+
+$spacers: (
+  0: 0,
+  1: $spacer * .1875,
+  2: $spacer * .25,
+  3: $spacer * .5,
+  4: $spacer * .625,
+  5: $spacer * .9375,
+  6: $spacer  ,
+  7: $spacer * 1.25,
+  8: $spacer * 1.5,
+  9: $spacer * 1.875,
+  10: $spacer * 2.5,
+  11: $spacer * 3,
+  12: $spacer * 3.125,
+  13: $spacer * 6.25,
+  
+) !default;
 
 @import "../node_modules/bootstrap/scss/functions";   // 1. Bootstrap functions
 @import "variables";                                  // 2. Your variables overrides                       
 @import "../node_modules/bootstrap/scss/bootstrap";   // 3. Full Bootstrap
+
+
+
 
 // Hero wrapper — navbar overlays the carousel
 .hero-wrapper {
@@ -117,7 +139,10 @@
 .bg-primary-emphasis   { background-color: $primary-emphasis !important; }
 
 
+
 // --- Featured News ---
+
+
 
 .featured-news-title {
   font-size: 2.5rem;
@@ -128,48 +153,49 @@
   line-height: 1.4;
 }
 
-.news-slider { width: 100%; }
 
-.news-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
-  padding: 0 0.9375rem;
-  box-sizing: border-box;
-}
+.section-margin {
+  margin-top: 3.125;
 
-.news-image-wrap {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  height: 22.6875rem;
-  transition: height 0.4s ease;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  @include media-breakpoint-up(md) {
+    margin-top: 6.25;
   }
 }
 
-.slick-current .news-image-wrap {
-  height: 34.6875rem;
-  border-radius: 0.625rem;
+.item-margin-1 {
+  margin-top: 1.875;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 3.125;
+  }
 }
 
+.item-margin-2 {
+  margin-top: 1.25;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 1.875;
+  }
+}
+
+//makes the news image on the side smaller than the current image
+
+.news-image-wrap {
+  height: clamp(13.3125rem, 30vh, 22.6875rem);
+  transition: height 0.4s ease;
+}
+
+.slick-current .news-image-wrap {
+  height: clamp(17.8125rem, 40vh, 34.6875rem);
+}
+
+//-----------------------------------------------------------
+
+
+
 .news-date {
-  position: absolute;
   bottom: 1.25rem;
   left: 1.25rem;
-  background: $primary;
-  color: #fff;
-  padding: 0.1875rem 0.625rem;
-  border-radius: 0.9375rem;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.4;
-  white-space: nowrap;
 }
 
 .slick-current .news-date {
@@ -177,23 +203,6 @@
   left: 2.5rem;
 }
 
-.news-headline {
-  font-size: 1.6875rem;
-  font-weight: 800;
-  color: #212529;
-  margin: 0;
-  line-height: 1.4;
-}
-
-.news-link {
-  color: $primary;
-  font-size: 1.125rem;
-  font-weight: 800;
-  text-decoration: underline;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3125rem;
-}
 
 .news-arrows {
   display: flex;
@@ -218,22 +227,6 @@
   }
 }
 
-.see-all-btn {
-  background: $primary;
-  color: #fff;
-  border: none;
-  border-radius: 1.875rem;
-  padding: 0.9375rem 1.5625rem;
-  font-size: 1.125rem;
-  font-weight: 800;
-  cursor: pointer;
-  line-height: 1.4;
-
-  &:hover {
-    background: $primary-emphasis;
-    color: $primary;
-  }
-}
 
 // --- Stat Card ---
 .stat-card {
@@ -259,36 +252,3 @@
   }
 }
 
-// :root {
-//   --margin-desktop: 9.375rem;
-//   --gutter-desktop: 1.875rem;
-//   --margin-tablet:  1.875rem;
-//   --gutter-tablet:  1.875rem;
-//   --margin-mobile:  0.9375rem;
-//   --gutter-mobile:  0.9375rem;
-// }
-
-// // Page wrapper
-// .page-wrapper {
-//   display: flex;
-//   width: 100%;
-//   max-width: 90rem;
-//   margin-inline: auto;
-//   padding: 0 var(--margin-desktop);
-//   justify-content: center;
-//   align-items: center;
-//   gap: var(--gutter-desktop);
-
-//   @include media-breakpoint-down(lg) {   // ≤ 991px → tablet
-//     max-width: 48rem;
-//     padding: 0 var(--margin-tablet);
-//     gap: var(--gutter-tablet);
-//   }
-
-//   @include media-breakpoint-down(sm) {   // ≤ 575px → mobile
-//     max-width: 23.4375rem;
-//     padding: 0 var(--margin-mobile);
-//     align-items: flex-start;
-//     gap: var(--gutter-mobile);
-//   }
-// }
