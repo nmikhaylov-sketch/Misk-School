@@ -19,7 +19,7 @@
   font-style: italic;
 }
 
-$spacer: 1rem !default;  // ← add this line
+$spacer: 1rem !default;  
 
 $spacers: (
   0: 0,
@@ -40,7 +40,7 @@ $spacers: (
 ) !default;
 
 @import "../node_modules/bootstrap/scss/functions";   // 1. Bootstrap functions
-@import "variables";                                  // 2. Your variables overrides                       
+@import "variables";                                  // 2. variables overrides                       
 @import "../node_modules/bootstrap/scss/bootstrap";   // 3. Full Bootstrap
 
 
@@ -52,18 +52,18 @@ $spacers: (
   line-height: 140%;
 
   @include media-breakpoint-down(md) {
-    font-size: 2.625rem; // paste your mobile value here
+    font-size: 2.625rem; 
   }
 }
 
 // Hero Body
 .hero-body {
-  font-size: 1.25rem; // your desktop value
+  font-size: 1.25rem; 
   font-weight: 300;
   line-height: 140%;
 
   @include media-breakpoint-down(md) {
-    font-size: 1.125; // your mobile value
+    font-size: 1.125;
   }
 }
 
@@ -145,7 +145,7 @@ $spacers: (
   height: clamp(17.8125rem, 40vh, 34.6875rem);
 }
 
-// min-height to keep the div under in its place.
+// min-height to keep the div under in its
 .news-slider {
   min-height: calc(clamp(17.8125rem, 40vh, 34.6875rem) + 8rem);
 }
@@ -172,7 +172,7 @@ $spacers: (
   .slick-prev,
   .slick-next {
     transform: none !important;
-    width: 2.1875rem;                 // 35px
+    width: 2.1875rem;                 
     height: 2.1875rem;
     background-color: $primary;
     color: white;
@@ -226,10 +226,10 @@ $spacers: (
 
 
 .info-image-col {
-  min-height: 18rem;           // gives the column height on mobile so the image fills it
+  min-height: 18rem;          
 
   @include media-breakpoint-up(md) {
-    min-height: unset;         // desktop: align-items-stretch handles it
+    min-height: unset;        
   }
 }
 
@@ -249,4 +249,18 @@ $spacers: (
   width: auto;
   mix-blend-mode: color-dodge;
   pointer-events: none;
+}
+
+.partner-cell {
+  aspect-ratio: 1;          // always square, fluid width from the column
+  padding: 1.5rem;
+  border: 1px solid #dee2e6; // optional — check Figma for border treatment
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;    // fits any logo shape without distortion
+  }
 }
