@@ -46,20 +46,6 @@ $spacers: (
 
 
 
-// Hero wrapper — navbar overlays the carousel
-.hero-wrapper {
-  position: relative;
-  padding: 0;
-
-  > .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-}
-
 .hero-title {
   font-size: 4.25rem;
   font-weight: 600;
@@ -159,6 +145,10 @@ $spacers: (
   height: clamp(17.8125rem, 40vh, 34.6875rem);
 }
 
+// min-height to keep the div under in its place.
+.news-slider {
+  min-height: calc(clamp(17.8125rem, 40vh, 34.6875rem) + 8rem);
+}
 //-----------------------------------------------------------
 
 
@@ -212,3 +202,51 @@ $spacers: (
   }
 }
 
+.more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  .more-link-text {
+    transition: transform 0.4s ease;
+    &.text-swapped { transform: translateX(var(--icon-w)); }
+  }
+
+  .more-link-icon {
+    width: 0.6rem;
+    height: 0.75rem;
+    transition: transform 0.4s ease;
+    &.icon-swapped { transform: translateX(calc(-1 * var(--text-w))); }
+  }
+}
+
+.more-link:hover {
+  text-decoration: none;
+}
+
+
+.info-image-col {
+  min-height: 18rem;           // gives the column height on mobile so the image fills it
+
+  @include media-breakpoint-up(md) {
+    min-height: unset;         // desktop: align-items-stretch handles it
+  }
+}
+
+.mix-blend {
+  mix-blend-mode: color-dodge;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.info-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+}
