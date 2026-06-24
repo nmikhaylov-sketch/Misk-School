@@ -15050,12 +15050,26 @@ textarea.form-control-lg {
 }
 .hero-title {
   font-size: 4.25rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 140%;
+  max-width: 47.625rem;
+  margin-bottom: 1.875rem;
 }
 @media (max-width: 767.98px) {
   .hero-title {
     font-size: 2.625rem;
+    align-self: stretch;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+.hero-padding {
+  margin: 0rem 9.38rem 5rem;
+}
+@media (max-width: 767.98px) {
+  .hero-padding {
+    margin: 0rem 0.94rem 3.13rem;
   }
 }
 
@@ -15070,13 +15084,38 @@ textarea.form-control-lg {
   }
 }
 
-.h-hero {
-  height: 34.4rem;
+.hero-carousel-height {
+  height: 37.5rem;
 }
-@media (max-width: 767.98px) {
-  .h-hero {
-    height: 22rem;
-  }
+
+.hero-image-height {
+  height: 61rem;
+}
+
+.carousel-indicators {
+  gap: 10px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 18px;
+  margin: 0;
+  background-color: transparent;
+  background-image: url("../img/Hero_Indicator.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+  opacity: 1;
+}
+.carousel-indicators [data-bs-target].active {
+  background-image: url("../img/Hero_Indicator_Active.svg");
+  opacity: 1;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0.5) 73%);
 }
 
 .quote {
