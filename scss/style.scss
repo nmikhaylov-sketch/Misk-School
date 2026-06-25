@@ -145,7 +145,8 @@ $spacers: (
 //as well as making the sides smaller than the current image
 
 .news-image-wrap {
-  height: 45vh;
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  height: min(45vh, 25vw); 
   transition: height 0.4s ease;
 
   &::after {
@@ -162,9 +163,7 @@ $spacers: (
   }
 }
 
-.news-card:hover .news-image-wrap::after {
-  opacity: 1;
-}
+.news-card:hover .news-image-wrap::after {opacity: 1;}
 
 .news-image-wrap img {
   //transform: scale(1.4); 
@@ -174,9 +173,7 @@ $spacers: (
   }
 }
 
-.news-card:hover .news-image-wrap img{
-  transform: scale(1.1);
-}
+.news-card:hover .news-image-wrap img{transform: scale(1.1);}
 
 // .slick-center img {
 //   transform: scale(1.4)
@@ -193,7 +190,8 @@ $spacers: (
 //makes the news image on the side smaller than the current image
 
 .slick-current .news-image-wrap {
-  height: 70vh;
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  height: min(70vh, 40vw);
   @include media-breakpoint-down (lg) {
     height: 40vh;
   }
@@ -201,7 +199,8 @@ $spacers: (
 
 // min-height to keep the div under in its
 .news-slider {
-  min-height: calc(70vh + 7rem);
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  min-height: calc(min(70vh, 40vw) + 7rem); 
   @include media-breakpoint-down (lg) {
     min-height: calc(40vh + 9rem);
   }
@@ -264,10 +263,7 @@ $spacers: (
   }
 }
 
-.hero-image-height {
-  height: 61rem;
-  
-}
+.hero-image-height {height: 61rem;}
 
 //Changes the Hero slider indicators to arrows
 .carousel-indicators {
@@ -294,9 +290,7 @@ $spacers: (
 }
 
 // gives the hero slider a slight gradiant 
-.hero-overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, rgba(0,0,0,0.5) 73%);
-}
+.hero-overlay {background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, rgba(0,0,0,0.5) 73%);}
 
 // --- Stat Card col ---
 
@@ -328,9 +322,7 @@ $spacers: (
   }
 }
 
-.more-link:hover {
-  text-decoration: none;
-}
+.more-link:hover {text-decoration: none;}
 
 
 .info-image-col {
@@ -341,13 +333,9 @@ $spacers: (
   }
 }
 
-.mix-blend {
-  mix-blend-mode: color-dodge;
-}
+.mix-blend {mix-blend-mode: color-dodge;}
 
-.text-justify {
-  text-align: justify !important;
-}
+.text-justify {text-align: justify !important;}
 
 .info-deco {
   position: absolute;
@@ -361,24 +349,18 @@ $spacers: (
 
 .partner-cell {
   aspect-ratio: 1 / 1;
-  height: 8.75rem;      
+  width: 100%;         
+  margin: auto;    
+  overflow: hidden;    
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  img {
-    object-fit: contain;
-  }
+  img {object-fit: contain;}
 
-  &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  }
+  &:hover {box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);}
 }
 
-.partner-cell img{
-  transition: transform 0.5s ease;
-}
+.partner-cell img{transition: transform 0.5s ease;}
 
-.partner-cell:hover img{
-  transform: scale(1.05);
-}
+.partner-cell:hover img{transform: scale(1.05);}
 
 .footer-accreditation {
   height: 3.2rem;
@@ -395,9 +377,7 @@ $spacers: (
   border-bottom: 1px solid transparent;
   transition: border-bottom-color 0.4s ease;
 
-  &:hover {
-    border-bottom-color: white;
-  }
+  &:hover {border-bottom-color: white;}
 }
 
 .footer-conditions-link {
@@ -406,11 +386,24 @@ $spacers: (
   font-weight: 300;
 }
 
-@include media-breakpoint-down (md) {
 
-  .info-image-disappear {display: none;}
-}
+.info-deco-panel {
+  position: relative;
+  overflow: hidden;
 
-.footer-image-panel {
-  min-height: 18rem;
+  &::after {
+
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 100%;
+    background-image: url('../img/Vertical_Arrows.svg');
+    background-repeat: repeat-y;
+    background-size: auto;
+    background-position: top right;
+    pointer-events: none;
+  }
 }

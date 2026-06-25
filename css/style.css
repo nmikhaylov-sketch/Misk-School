@@ -15572,7 +15572,7 @@ textarea.form-control-lg {
 }
 
 .news-image-wrap {
-  height: 45vh;
+  height: min(45vh, 25vw);
   transition: height 0.4s ease;
 }
 .news-image-wrap::after {
@@ -15608,7 +15608,7 @@ textarea.form-control-lg {
 }
 
 .slick-current .news-image-wrap {
-  height: 70vh;
+  height: min(70vh, 40vw);
 }
 @media (max-width: 991.98px) {
   .slick-current .news-image-wrap {
@@ -15617,7 +15617,7 @@ textarea.form-control-lg {
 }
 
 .news-slider {
-  min-height: calc(70vh + 7rem);
+  min-height: calc(min(70vh, 40vw) + 7rem);
 }
 @media (max-width: 991.98px) {
   .news-slider {
@@ -15775,7 +15775,9 @@ textarea.form-control-lg {
 
 .partner-cell {
   aspect-ratio: 1/1;
-  height: 8.75rem;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .partner-cell img {
@@ -15818,13 +15820,22 @@ textarea.form-control-lg {
   font-weight: 300;
 }
 
-@media (max-width: 767.98px) {
-  .info-image-disappear {
-    display: none;
-  }
+.info-deco-panel {
+  position: relative;
+  overflow: hidden;
 }
-.footer-image-panel {
-  min-height: 18rem;
+.info-deco-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 100%;
+  background-image: url("../img/Vertical_Arrows.svg");
+  background-repeat: repeat-y;
+  background-size: auto;
+  background-position: top right;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

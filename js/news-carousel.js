@@ -1,4 +1,3 @@
-
 //slick code for the Featured News carousel
 $(document).ready(function () {
   $('.news-slider').slick({
