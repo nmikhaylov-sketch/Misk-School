@@ -206,9 +206,9 @@ $spacers: (
   transition: transform 0.4s ease-out;
 }
 
-// .news-card:hover .news-image-wrap img{
-//   transform: scale(1.1);
-// }
+.news-card:hover .news-image-wrap img{
+  transform: scale(1.1);
+}
 
 // .slick-center img {
 //   transform: scale(1.4)
@@ -344,15 +344,22 @@ $spacers: (
 }
 
 .partner-cell {
-  aspect-ratio: 1;          // always square, fluid width from the column
-  padding: 1.5rem;
-  border: 1px solid #dee2e6; // optional — check Figma for border treatment
-
+  aspect-ratio: 1 / 1;
+  height: 8.75rem;      
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;    // fits any logo shape without distortion
+    object-fit: contain;
   }
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.partner-cell img{
+  transition: transform 0.5s ease;
+}
+
+.partner-cell:hover img{
+  transform: scale(1.05);
 }
