@@ -10,62 +10,64 @@
   <body class="bg-secondary">
 
 
+     <nav class="navbar position-absolute end-0 top-0 p-0">
+            <div class="d-flex align-items-start pt-0 gap-11">
+                <a class="ms-5 my-4 z-3" href="#">
+                    <img src="../img/Type=Light.svg" class="misk-logo">
+                </a>
 
+                <button class="navbar-toggler border-0 p-0 m-0 hamburger-icon" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
+                    <img src="../img/Burger Menu.svg" class="hamburger-icon">
+                </button>
 
-     <nav class="navbar position-absolute z-3 top-0 end-0 pt-0">
-            <div class="row w-100">
-                <div class="d-flex align-items-start p-3 justify-content-between">
+                <div class="collapse position-absolute w-100 bg-primary z-2" id="toggleTarget">
+                    <div class="d-flex flex-column h-100 px-3 pt-2 pe-5 ">
 
-                    <a class="navbar-brand" href="#">
-                        <img src="../img/Type=Light.svg" class="z-3">
-                    </a>
-
-                    <button class="navbar-toggler border-0 p-0 m-0" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
-                        <img src="../img/Burger Menu.svg">
-                    </button>
-
-                <div class="collapse position-absolute top-0 end-0 bg-primary z-2" id="toggleTarget">
-                    <div class="d-flex flex-column h-100 p-3">
-
-                        <button class="btn border-0 bg-transparent p-0 lh-1 fs-1 ms-auto"
-                                style="--bs-btn-color: white; --bs-btn-hover-color: white;"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#toggleTarget"
-                                aria-label="Close menu">
-                        &times;
+                        <button class="btn border-0 bg-transparent py-4 px-5 text-primary-emphasis hero-body ms-auto" data-bs-toggle="collapse" data-bs-target="#toggleTarget" aria-label="Close menu">
+                            <img src="../img/Close_Icon.svg" width="30" height="30" alt="Close menu">
                         </button>
 
                         <ul class="navbar-nav px-4 pt-4">
 
                             <li class="nav-item">
-                            <a class="nav-link text-white fs-2 fw-semibold" href="#">About Us</a>
+                            <a class="nav-link nav-link-hamburger text-white fs-2 fw-semibold" href="#">About Us</a>
                             </li>
 
                             <li class="nav-item dropdown">
-                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
-                                Admissions <span class="text-secondary">▾</span>
+                            <a class="nav-link nav-link-hamburger text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Admissions <span class="nav-arrow-wrap">
+                                            <span class="arrow-down">▾</span>
+                                            <span class="arrow-up">▴</span>
+                                            </span>
                             </a>
 
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="" href="#">Item</a></li>
                             </ul>
                             </li>
 
                             <li class="nav-item dropdown">
-                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
-                                Learning Journey <span class="text-secondary">▾</span>
+                            <a class="nav-link nav-link-hamburger text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Learning Journey <span class="nav-arrow-wrap">
+                                                <span class="arrow-down">▾</span>
+                                                <span class="arrow-up">▴</span>
+                                                </span>
+
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="" href="#">Item</a></li>
                             </ul>
                             </li>
 
                             <li class="nav-item dropdown">
-                            <a class="nav-link text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
-                                Work With Us <span class="text-secondary">▾</span>
+                            <a class="nav-link nav-link-hamburger text-white fs-2 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Work With Us <span class="nav-arrow-wrap">
+                                                <span class="arrow-down">▾</span>
+                                                <span class="arrow-up">▴</span>
+                                                </span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Item</a></li>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="text-white" href="#">Item</a></li>
                             </ul>
                             </li>
 

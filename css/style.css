@@ -15571,6 +15571,16 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #00372A;
 }
 
+.hamburger-icon {
+  width: 10.25rem;
+  height: 3.625rem;
+}
+
+.misk-logo {
+  width: 9.38rem;
+  height: 3.02rem;
+}
+
 .news-image-wrap {
   height: min(45vh, 25vw);
   transition: height 0.4s ease;
@@ -15836,6 +15846,52 @@ textarea.form-control-lg {
   background-size: auto;
   background-position: top right;
   pointer-events: none;
+}
+
+.nav-arrow-wrap {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.nav-arrow-wrap .arrow-down, .nav-arrow-wrap .arrow-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.nav-arrow-wrap .arrow-up {
+  opacity: 0;
+}
+
+.nav-link[aria-expanded=true] .nav-arrow-wrap .arrow-down {
+  opacity: 0;
+}
+.nav-link[aria-expanded=true] .nav-arrow-wrap .arrow-up {
+  opacity: 1;
+}
+
+.nav-link-hamburger {
+  position: relative;
+}
+.nav-link-hamburger::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: "";
+  background-color: #C2D500;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.nav-link-hamburger:hover:after {
+  opacity: 1;
+  background-color: white;
+  transition: opacity 0.5s;
+}
+.nav-link-hamburger[aria-expanded=true]::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

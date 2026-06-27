@@ -141,6 +141,18 @@ $spacers: (
   );
 }
 
+
+//header hamburger menu
+.hamburger-icon {
+  width: 10.25rem;
+  height: 3.625rem;
+}
+
+.misk-logo {
+  width: 9.38rem;
+  height: 3.02rem;
+}
+
 // The code for the image hover effect
 //as well as making the sides smaller than the current image
 
@@ -407,3 +419,48 @@ $spacers: (
     pointer-events: none;
   }
 }
+
+
+.nav-arrow-wrap {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  .arrow-down, .arrow-up {
+    position: absolute;
+    top: 0; left: 0;
+    transition: opacity 0.3s ease;
+  }
+  .arrow-up { opacity: 0; }
+}
+
+.nav-link[aria-expanded="true"] .nav-arrow-wrap {
+  .arrow-down { opacity: 0; }
+  .arrow-up   { opacity: 1; }
+}
+
+.nav-link-hamburger {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    content: "";
+    background-color: $primary-emphasis;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  &:hover:after{ 
+    opacity: 1;
+    background-color: white;
+    transition: opacity 0.5s;
+  }
+  &[aria-expanded="true"]::after {
+    opacity: 1;
+  }
+}
+
