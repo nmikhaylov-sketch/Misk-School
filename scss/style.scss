@@ -130,6 +130,15 @@ $spacers: (
 // add the primary-emphasis class utilities
 .text-primary-emphasis { color: $primary-emphasis !important; }
 .bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+.bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
+
+.table-tertiary-emphasis {
+  --bs-table-bg: #{$tertiary-emphasis};
+  --bs-table-striped-bg: #{mix(#000, $tertiary-emphasis, 5%)};
+  --bs-table-active-bg: #{mix(#000, $tertiary-emphasis, 10%)};
+  --bs-table-hover-bg: $tertiary-emphasis;
+}
+
 
 .btn-primary {
   @include button-variant(
@@ -141,16 +150,27 @@ $spacers: (
   );
 }
 
+//Makes the scrollbar invisible
+::-webkit-scrollbar { display: none; }
+
 
 //header hamburger menu
 .hamburger-icon {
   width: 10.25rem;
   height: 3.625rem;
+  @include media-breakpoint-down(sm) {
+    width: 8rem;
+    height: 2.83rem;
+  }
 }
 
 .misk-logo {
   width: 9.38rem;
   height: 3.02rem;
+  @include media-breakpoint-down(sm) {
+    width: 7.32rem;
+    height: 2.36rem;
+  }
 }
 
 // The code for the image hover effect
@@ -338,10 +358,11 @@ $spacers: (
 
 
 .info-image-col {
-  min-height: 18rem;          
+  min-height: 18rem;    
+  max-height: 50rem;      
 
   @include media-breakpoint-up(md) {
-    min-height: unset;        
+    min-height: unset;       
   }
 }
 
@@ -398,14 +419,11 @@ $spacers: (
   font-weight: 300;
 }
 
+.footer-img { object-position: top; }
 
-.info-deco-panel {
-  position: relative;
-  overflow: hidden;
 
-  &::after {
 
-    
+.info-deco-panel::after {
     content: '';
     position: absolute;
     top: 0;
@@ -414,12 +432,26 @@ $spacers: (
     height: 100%;
     background-image: url('../img/Vertical_Arrows.svg');
     background-repeat: repeat-y;
-    background-size: auto;
+    mix-blend-mode: color-dodge;
     background-position: top right;
-    pointer-events: none;
+}
+
+//header
+@include media-breakpoint-down(md) {
+  .navbar-header {
+    left: 0;
   }
 }
 
+//needed to remove the border around the button
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.limit-menu-height {
+  height: 60vh;
+}
 
 .nav-arrow-wrap {
   position: relative;
@@ -457,10 +489,84 @@ $spacers: (
   &:hover:after{ 
     opacity: 1;
     background-color: white;
-    transition: opacity 0.5s;
   }
   &[aria-expanded="true"]::after {
     opacity: 1;
   }
 }
+
+
+// adds the menu animation
+#toggleTarget {
+  &.collapsing {
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &.collapse:not(.show) {
+    opacity: 0;
+    
+  }
+
+  &.show {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+// for header 2
+.navbar-toggler img:last-child {
+  transition: opacity 0.3s ease;
+}
+
+.navbar-toggler:hover img:last-child {
+  opacity: 0;
+}
+
+
+.node-banner {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: $tertiary-emphasis;
+  }
+
+  // With image: green cuts off before image bottom
+  &.has-image::before { bottom: 32%; }
+
+  // No image: green ends at vertical center of info bar (~21px = half of ~42px bar)
+  &:not(.has-image)::before { bottom: 21px; }
+
+  // Keep all children above the bg pseudo-element
+  > * { position: relative; z-index: 1; }
+}
+
+
+// add the table hover effect
+.table-hover > tbody > tr > td {
+  box-shadow: inset 0 0 0 0px transparent;
+  transition: box-shadow 0.5s ease, 
+  background-color 0.5s ease;
+}
+.table-hover > tbody > tr > td:hover {
+  box-shadow: inset 0 0 0 1px black;
+  transition: box-shadow 0.4s ease,
+  background-color 0.5s ease;
+}
+
+.table-hover > tbody > tr:hover > td {
+  background-color: $tertiary-emphasis;
+}
+
+.table-hover > thead > tr > th {
+  transition: background-color 0.5s ease;
+}
+
+.table-hover > thead > tr > th:hover {
+  background-color: $secondary-emphasis;
+  transition: background-color 0.4s ease;
+}
+
 

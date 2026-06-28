@@ -3,9 +3,9 @@
 $primary:       #00372A !default;
 $primary-emphasis: #C2D500 !default;
 $secondary:     #D9E378 !default;
-// $secondary-emphasis: #21B592 !default;
+$secondary-emphasis: #21B592 !default;
 $tertiary:     #E4ECEA !default;
-// $tertiary-emphasis: #DBEAE6 !default;
+$tertiary-emphasis: #DBEAE6 !default;
 $link-hover:    #C2D500 !default;
 // ----alert colors
 $alert-success: #198754 !default;
@@ -14,6 +14,10 @@ $alert-warning: #FFCD39!default;
 $alert-error:  #B02A37 !default;
 $alert-warning: #FFCD39!default;
 $alert-error:  #B02A37 !default;
+
+
+$table-hover-bg: $tertiary-emphasis;
+$table-hover-color: $primary;
 
 
 
