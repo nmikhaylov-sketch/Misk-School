@@ -207,17 +207,6 @@ $spacers: (
 
 .news-card:hover .news-image-wrap img{transform: scale(1.1);}
 
-// .slick-center img {
-//   transform: scale(1.4)
-// }
-
-// .news-card:hover .news-image-wrap img {
-//   transform: scale(1.1);
-// }
-
-// .news-card.slick-center:hover .news-image-wrap img {
-//   transform: scale(1.6);
-// }
 
 //makes the news image on the side smaller than the current image
 
@@ -249,6 +238,10 @@ $spacers: (
 .slick-current .news-date {
   bottom: 2.5rem;
   left: 2.5rem;
+  @include media-breakpoint-down(md) {
+    left: 0.9375rem;
+    bottom: 0.9375rem;
+  }
 }
 
 .news-card h3 {
@@ -436,7 +429,7 @@ $spacers: (
     background-position: top right;
 }
 
-//header
+//-----------------------header---------------------------------
 @include media-breakpoint-down(md) {
   .navbar-header {
     left: 0;
@@ -451,6 +444,9 @@ $spacers: (
 
 .limit-menu-height {
   height: 60vh;
+  @include media-breakpoint-down(md) {
+    height: 100vh;
+  }
 }
 
 .nav-arrow-wrap {
@@ -496,7 +492,7 @@ $spacers: (
 }
 
 
-// adds the menu animation
+// adds the menu animation----------
 #toggleTarget {
   &.collapsing {
     height: auto;
@@ -515,12 +511,13 @@ $spacers: (
   }
 }
 
-// for header 2
-.navbar-toggler img:last-child {
+
+// for header 2--------------------
+.btn-animation img:last-child {
   transition: opacity 0.3s ease;
 }
 
-.navbar-toggler:hover img:last-child {
+.btn-animation:hover img:last-child {
   opacity: 0;
 }
 
@@ -543,15 +540,32 @@ $spacers: (
   > * { position: relative; z-index: 1; }
 }
 
+.node-banner-image {
+  margin-left: 9.375rem;           // 150px — aligns with page content edge
+  width: calc(100% - 28.125rem);   // 150px left + 300px right = 990px on 1440px page
+  height: 34.75rem;                // 556px desktop
 
-// add the table hover effect
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+    width: 100%;
+    height: 25rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 18rem;
+  }
+}
+
+
+//-----------------Table-------------------------
+//add the table hover effect---------------------
 .table-hover > tbody > tr > td {
   box-shadow: inset 0 0 0 0px transparent;
   transition: box-shadow 0.5s ease, 
   background-color 0.5s ease;
 }
 .table-hover > tbody > tr > td:hover {
-  box-shadow: inset 0 0 0 1px black;
+  box-shadow: inset 0 0 0 1px $primary;
   transition: box-shadow 0.4s ease,
   background-color 0.5s ease;
 }
@@ -568,5 +582,3 @@ $spacers: (
   background-color: $secondary-emphasis;
   transition: background-color 0.4s ease;
 }
-
-
