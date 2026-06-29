@@ -32,9 +32,20 @@
 
 .limit-menu-height {
   height: 60vh;
+
   @include media-breakpoint-down(md) {
     height: 100vh;
   }
+   //fic the menu for phones in landscape mode
+  @media (orientation: landscape) and (max-height: 500px) {
+    height: 100vh;
+  }
+}
+
+
+// grays out the unselected links only if a link is selected
+ul:has(.nav-link[aria-expanded="true"]) .nav-link[aria-expanded="false"] {
+  color: shade-color(white, 35%);
 }
 
 .nav-arrow-wrap {
@@ -56,19 +67,38 @@
   .arrow-up   { opacity: 1; }
 }
 
-.nav-link-hamburger {
+@keyframes nav-link-flash {
+  0%   { color: shade-color(white, 40%); }
+  100% { color: white; }
+}
+
+.nav-link-hover {
+  z--bs-navbar-active-color: white;
+  color: white;
+
+  // needed because bootstrap hover overrides
+  &:focus,
+  &:active {
+    color: white !important; 
+  }
+
   position: relative;
+  transition: transform 0.3s ease;
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 1px;
     content: "";
     background-color: $primary-emphasis;
     opacity: 0;
     transition: opacity 0.5s;
+  }
+  &:hover {
+    transform: translateY(-1px);
+    animation: nav-link-flash 0.6s ease-out forwards;
   }
   &:hover:after{ 
     opacity: 1;
@@ -76,6 +106,7 @@
   }
   &[aria-expanded="true"]::after {
     opacity: 1;
+    height: 2px;
   }
 }
 

@@ -68,5 +68,33 @@
   h6 { @include font-size(0.875rem); }
 }
 
+// makes the list dots larger
+ul li::marker {
+  font-size: 1.5em;
+  color: $dark;
+}
+
+// add the primary-emphasis class utilities
+.text-primary-emphasis { color: $primary-emphasis !important; }
+.bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+.bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
+
+.table-tertiary-emphasis {
+  --bs-table-bg: #{$tertiary-emphasis};
+  --bs-table-striped-bg: #{mix(#000, $tertiary-emphasis, 5%)};
+  --bs-table-active-bg: #{mix(#000, $tertiary-emphasis, 10%)};
+  --bs-table-hover-bg: $tertiary-emphasis;
+}
+
+
+.btn-primary {
+  @include button-variant(
+    $background:        $primary,
+    $border:            $primary,
+    $hover-background:  $primary-emphasis,
+    $hover-border:      $primary-emphasis,
+    $hover-color:       #000
+  );
+}
 
 
