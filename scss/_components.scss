@@ -1,0 +1,373 @@
+.btn-primary {
+  @include button-variant(
+    $background:        $primary,
+    $border:            $primary,
+    $hover-background:  $primary-emphasis,
+    $hover-border:      $primary-emphasis,
+    $hover-color:       #000
+  );
+}
+
+// add the primary-emphasis class utilities
+.text-primary-emphasis { color: $primary-emphasis !important; }
+.bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+.bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
+
+.table-tertiary-emphasis {
+  --bs-table-bg: #{$tertiary-emphasis};
+  --bs-table-striped-bg: #{mix(#000, $tertiary-emphasis, 5%)};
+  --bs-table-active-bg: #{mix(#000, $tertiary-emphasis, 10%)};
+  --bs-table-hover-bg: $tertiary-emphasis;
+}
+
+
+.btn-primary {
+  @include button-variant(
+    $background:        $primary,
+    $border:            $primary,
+    $hover-background:  $primary-emphasis,
+    $hover-border:      $primary-emphasis,
+    $hover-color:       #000
+  );
+}
+
+
+//Makes the scrollbar invisible
+::-webkit-scrollbar { display: none; }
+
+// The code for the image hover effect
+//as well as making the sides smaller than the current image
+
+.news-image-wrap {
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  height: min(45vh, 25vw); 
+  transition: height 0.4s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-color: rgba($primary, 0.2);
+    pointer-events: none;
+    transition: opacity 0.4s ease;  // ← was missing, overlay was popping not fading
+  }
+  @include media-breakpoint-down (lg) {
+    height: 30vh;
+  }
+}
+
+.news-card:hover .news-image-wrap::after {opacity: 1;}
+
+.news-image-wrap img {
+  //transform: scale(1.4); 
+  transition: transform 0.4s ease-out;
+  @include media-breakpoint-down (lg) {
+    transform: scale(1.3);
+  }
+}
+
+.news-card:hover .news-image-wrap img{transform: scale(1.1);}
+
+
+//makes the news image on the side smaller than the current image
+
+.slick-current .news-image-wrap {
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  height: min(70vh, 40vw);
+  @include media-breakpoint-down (lg) {
+    height: 40vh;
+  }
+}
+
+// min-height to keep the div under in its
+.news-slider {
+  //min picks the smaller screen value to help differentiate between ipads and desktops
+  min-height: calc(min(70vh, 40vw) + 7rem); 
+  @include media-breakpoint-down (lg) {
+    min-height: calc(40vh + 9rem);
+  }
+}
+
+// places the date on the image with the proper margins
+.news-date {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+
+// changes the margins for the current image
+.slick-current .news-date {
+  bottom: 2.5rem;
+  left: 2.5rem;
+  @include media-breakpoint-down(md) {
+    left: 0.9375rem;
+    bottom: 0.9375rem;
+  }
+}
+
+.news-card h3 {
+  min-height: 2lh;
+  max-height: 3lh;
+  overflow: hidden;
+}
+
+// responcible for the prev and next arrow designs
+.news-arrows {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+
+  .slick-prev,
+  .slick-next {
+    transform: none !important;
+    width: 2.1875rem;                 
+    height: 2.1875rem;
+    background-color: $primary;
+    color: white;
+    border: none;
+    &:before { content: none; }      // remove slick's font icon
+    &:hover {
+      background-color: $primary-emphasis;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      display: block;
+      filter: invert(1);
+
+    }
+  }
+}
+//-----------------------------------------------------------
+
+// resposible for the Hero Slider Specs.
+.hero-carousel-height{
+  height: 37.5rem;
+  @include media-breakpoint-down (md) {
+    height: 100vh;
+  }
+}
+
+.hero-padding {
+  margin: 0rem 9.38rem 5rem;
+
+  @include media-breakpoint-down (md) {
+      margin: 0rem 0.94rem 3.13rem;
+  }
+}
+
+
+.hero-image-height {height: 61rem;}
+
+//Changes the Hero slider indicators to arrows
+.carousel-indicators {
+  gap: 10px;
+
+  [data-bs-target] {
+    width: 14px;
+    height: 18px;
+    margin: 0;
+    background-color: transparent;
+    background-image: url('../img/Hero_Indicator.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+    opacity: 1;
+    &.active {
+      background-image: url('../img/Hero_Indicator_Active.svg');
+      opacity: 1;
+    }
+  }
+}
+
+// gives the hero slider a slight gradiant 
+.hero-overlay {background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, rgba(0,0,0,0.5) 73%);}
+
+// --- Stat Card col ---
+
+.stat-col {
+  gap: 0.9375rem;        
+  width: 16.25rem;   
+  @include media-breakpoint-down(md) {
+    width: 100%;            
+  }
+}
+
+
+// adds the proper styling and animation to any link
+.more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  .more-link-text {
+    transition: transform 0.4s ease;
+    &.text-swapped { transform: translateX(var(--icon-w)); }
+  }
+
+  .more-link-icon {
+    width: 0.6rem;
+    height: 0.75rem;
+    transition: transform 0.4s ease;
+    &.icon-swapped { transform: translateX(calc(-1 * var(--text-w))); }
+  }
+}
+
+.more-link:hover {text-decoration: none;}
+
+
+.info-image-col {
+  min-height: 18rem;    
+  max-height: 50rem;      
+
+  @include media-breakpoint-up(md) {
+    min-height: unset;       
+  }
+}
+
+.mix-blend {mix-blend-mode: color-dodge;}
+
+.text-justify {text-align: justify !important;}
+
+.info-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+}
+
+.partner-cell {
+  aspect-ratio: 1 / 1;     
+  margin: auto;    
+  overflow: hidden;    
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  img {object-fit: contain;}
+
+  @include media-breakpoint-between(md,lg) {width: 100%;}
+
+  &:hover {box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);}
+}
+
+.partner-cell img{transition: transform 0.5s ease;}
+
+.partner-cell:hover img{transform: scale(1.05);}
+
+.footer-logo{
+  height: 3.2rem;
+  width: auto;
+  max-width: 45%;
+}
+
+.hover-link {
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.4s ease;
+
+  &:hover {border-bottom-color: currentColor;}
+}
+
+.footer-conditions-link {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.footer-img { object-position: top; }
+
+
+// gives a slight animation to any social link
+.social-link {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.info-deco-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 100%;
+    background-image: url('../img/Vertical_Arrows.svg');
+    background-repeat: repeat-y;
+    mix-blend-mode: color-dodge;
+    background-position: top right;
+}
+
+.node-banner {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: $tertiary-emphasis;
+  }
+
+  // if an image has a "has-image" class the tertiary bg fills to have the image
+  &.has-image::before { bottom: 32%; }
+
+  // if no "has-image" class the tertiary bg ends at the center of the info bar
+  &:not(.has-image)::before { bottom: 21px; }
+
+  // Keep all children above the bg pseudo-element
+  > * { position: relative; z-index: 1; }
+}
+
+.node-banner-image {         
+  width: 85%;  
+  height: 34.75rem;              
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+    width: 100%;
+    height: 25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 18rem;
+  }
+}
+
+
+//-----------------Table-------------------------
+//add the table hover effect---------------------
+.table-hover > tbody > tr > td {
+  box-shadow: inset 0 0 0 0px transparent;
+  transition: box-shadow 0.5s ease, 
+  background-color 0.5s ease;
+}
+.table-hover > tbody > tr > td:hover {
+  box-shadow: inset 0 0 0 1px $primary;
+  transition: box-shadow 0.4s ease,
+  background-color 0.5s ease;
+}
+
+.table-hover > tbody > tr:hover > td {
+  background-color: $tertiary-emphasis;
+}
+
+.table-hover > thead > tr > th {
+  transition: background-color 0.5s ease;
+}
+
+.table-hover > thead > tr > th:hover {
+  background-color: $secondary-emphasis;
+  transition: background-color 0.4s ease;
+}
+
+
+
+ul li::marker {
+  font-size: 1.5em;
+  color: $dark;
+}

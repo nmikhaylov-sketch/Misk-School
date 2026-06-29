@@ -1,0 +1,72 @@
+.hero-title {
+  @include font-size(4.25rem);
+  font-weight: 800;
+  line-height: 140%;
+  max-width: 47.625rem;
+  margin-bottom: 1.875rem;
+
+  @include media-breakpoint-down(md) {
+    @include font-size(2.625rem); 
+    align-self: stretch;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+
+// Hero Body
+.hero-body {
+  @include font-size(1.25rem); 
+  font-weight: 300;
+  line-height: 140%;
+
+  @include media-breakpoint-down(md) {
+    @include font-size(1.125);
+  }
+}
+
+// Quote
+.quote {
+  @include font-size(1.5625rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 150%;
+
+  @include media-breakpoint-down(md) {
+    @include font-size(1rem);
+    line-height: 140%;
+  }
+}
+
+// Date
+.date {
+  @include font-size(1rem);
+  font-weight: 300;
+  line-height: 140%;
+
+  @include media-breakpoint-down(md) {
+    @include font-size(0.875rem);
+  }
+}
+
+// Mobile Display overrides
+@include media-breakpoint-down(md) {
+  .display-1 { @include font-size(3.125rem); }
+  .display-2 { @include font-size(2.375rem); }
+  .display-3 { @include font-size(1.75rem); }
+  .display-4 { @include font-size(1.5rem); }
+  .display-5 { @include font-size(1.25rem); }
+  .display-6 { @include font-size(1rem); }
+}
+
+@include media-breakpoint-down(md) {
+  h1 { @include font-size(2.25rem); font-weight: 800; }
+  h2 { @include font-size(1.75rem); }
+  h3 { @include font-size(1.375rem); }
+  h4 { @include font-size(1.25rem); }
+  h5 { @include font-size(1.125rem); }
+  h6 { @include font-size(0.875rem); }
+}
+
+
+

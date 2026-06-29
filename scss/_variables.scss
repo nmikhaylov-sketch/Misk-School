@@ -1,3 +1,25 @@
+
+$spacer: 1rem !default;  
+
+$spacers: (
+  0: 0,
+  1: $spacer * .1875,
+  2: $spacer * .25,
+  3: $spacer * .5,
+  4: $spacer * .625,
+  5: $spacer * .9375,
+  6: $spacer  ,
+  7: $spacer * 1.25,
+  8: $spacer * 1.5,
+  9: $spacer * 1.875,
+  10: $spacer * 2.5,
+  11: $spacer * 3,
+  12: $spacer * 3.125,
+  13: $spacer * 6.25,
+  14: $spacer * 9.375,
+  
+) !default;
+
 // ----------------Colors--------------------
 
 $primary:       #00372A !default;
@@ -23,9 +45,8 @@ $table-hover-color: $primary;
 
 //------------------Typography--------------------
 
-
+$font-size-base: 1.125rem;
 $font-family-base: 'Codec Pro', sans-serif;
-$font-size-base: 1rem;  
 
 // Display
 $display-font-sizes: (
@@ -47,7 +68,25 @@ $h6-font-size:  1rem;
 
 // font weights
 $display-font-weight: 600;
-$headings-font-weight: 600;
+$headings-font-weight: 800;
 $headings-line-height: 1.4;
+
+
+// add the primary-emphasis class utilities
+.text-primary-emphasis { color: $primary-emphasis !important; }
+.bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+.bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
+
+.table-tertiary-emphasis {
+  --bs-table-bg: #{$tertiary-emphasis};
+  --bs-table-striped-bg: #{mix(#000, $tertiary-emphasis, 5%)};
+  --bs-table-active-bg: #{mix(#000, $tertiary-emphasis, 10%)};
+  --bs-table-hover-bg: $tertiary-emphasis;
+}
+
+$enable-negative-margins: true;
+
+
+
 
 

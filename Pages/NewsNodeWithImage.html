@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Node With Image</title>
+    <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+
+    
+    <!-- -------------Header------------- -->
+    <header>
+
+    <a class="position-absolute top-0 start-0 ms-5 mt-4 z-3" href="#">
+        <img src="../img/Type=Dark.svg" class="misk-logo">
+    </a>
+     <nav class="navbar navbar-header position-absolute end-0 top-0 p-0">
+            <!-- -------------Visible logo and Hamburger menu------------ -->
+            <div class="d-flex align-items-start pt-0 gap-11 w-100 justify-content-between">
+
+                <a class="ms-5 my-4 z-3" href="#">
+                    <img src="../img/Type=Light.svg" class="misk-logo opacity-0">
+                </a>
+
+                <button class="navbar-toggler btn-animation position-relative border-0 p-0 m-0 hamburger-icon z-1" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
+                    <img src="../img/Burger_Menu.svg" class="hamburger-icon position-absolute top-0 end-0">
+                    <img src="../img/Burger_Menu_Dark.svg" class="hamburger-icon position-absolute top-0 end-0">
+                </button>
+
+
+                <!-- --------------Collapsed menu---------- -->
+                <div class="collapse position-absolute w-100 limit-menu-height bg-primary z-2" id="toggleTarget">
+                    <div class="d-flex flex-column h-100 px-3 pt-2 pe-5">
+                        <!-- -----------The close menu button------------ -->
+                        <button class="btn border-0 bg-transparent py-4 px-5 text-primary-emphasis hero-body ms-auto" data-bs-toggle="collapse" data-bs-target="#toggleTarget" aria-label="Close menu">
+                            <img src="../img/Close_Icon.svg" width="30" height="30" alt="Close menu">
+                        </button>
+                        <!-- ------------The menu items--------------- -->
+                        <ul class="navbar-nav flex-grow-1 overflow-auto px-4 pt-4 gap-7">
+                            
+                            <!-- ----------Single section------------ -->
+                            <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-hamburger text-white fs-3 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                About Us
+
+                            </a>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <!-- --------Single Section Item---------------- -->
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <!-- ----- -->
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                            </ul>
+                            </li>
+                            <!-- ----------------------------------- -->
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-hamburger text-white fs-3 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Admissions <span class="nav-arrow-wrap">
+                                            <span class="text-primary-emphasis arrow-down">▾</span>
+                                            <span class="text-primary-emphasis arrow-up">▴</span>
+                                            </span>
+                            </a>
+
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                            </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-hamburger text-white fs-3 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Learning Journey <span class="nav-arrow-wrap">
+                                                <span class="text-primary-emphasis arrow-down">▾</span>
+                                                <span class="text-primary-emphasis arrow-up">▴</span>
+                                                </span>
+
+                            </a>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                            </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-hamburger text-white fs-3 fw-semibold" href="#" data-bs-toggle="dropdown">
+                                Work With Us <span class="nav-arrow-wrap">
+                                                <span class="text-primary-emphasis arrow-down">▾</span>
+                                                <span class="text-primary-emphasis arrow-up">▴</span>
+                                                </span>
+                            </a>
+                            <ul class="dropdown-menu bg-primary border-0">
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                                <li><a class="text-white text-decoration-none fs-5 py-1" href="#">Item</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+
+                        <!-- -------------Search bar------------- -->
+                        <hr class="text-primary-emphasis mt-5 opacity-75">
+                        <div class="input-group px-4 mb-5">
+                            <input type="search" class="form-control rounded-0 bg-light border-white text-white py-5" placeholder="Search...">
+                            <button class="btn btn-light rounded-0" type="button"><img src="../img/search.svg"></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+        <!-- ---------------Node Page----------------- -->
+
+    <section class="node-banner has-image position-relative pt-14">
+        <!-- ----Title---- -->
+        <div class="ps-auto mx-9 mx-xs-12 mx-md-14 mb-9">
+        <h1>Misk Schools Inaugurates the Fourth Industrial Revolution Center (Atheer) to Develop a Generation of Future Leaders in Digital Fields</h1>
+        </div>
+
+        <!-- ---Info-bar--- -->
+
+        <div class="bg-primary-emphasis text-dark d-flex justify-content-between align-items-center col-10 col-sm-8 col-md-7 py-4 ps-9 ps-xs-12 ps-md-14 pe-5 pe-md-9 z-2">
+            <span class="date text-black">May 15, 2023</span>
+
+            <div class="row d-inline-block position-relative">
+                <div class="d-flex gap-3 gap-sm-5 ">
+                <a href="#">
+                    <img src="../img/Social-Links/social-facebook.svg" class="social-link" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="../img/Social-Links/social-instagram.svg" class="social-link" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="../img/Social-Links/social-linkedin.svg" class="social-link" alt="LinkedIn">
+                </a>
+                <a href="#">
+                    <img src="../img/Social-Links/social-x.svg" class="social-link" alt="X">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- --Image-- -->
+        <div class="node-banner-image mt-n8 rounded-2 overflow-hidden ps-0 ps-md-13 ps-lg-14">
+            <img class="z-0 w-100 h-100 object-fit-cover" src="../img/img7.png" alt="">
+        </div>
+    </section>
+
+        <!-- --------------- Main Body ----------------- -->
+
+    <div class="mx-9 mx-xs-12 mx-md-14 mt-13">
+        <div class="col-12 col-md-10 col-lg-10 d-flex flex-column gap-7">
+
+            <!-- Text block -->
+            <div class="d-flex flex-column gap-7">
+            <h3>Riyadh, Saudi Arabia –</h3>
+            <div class="d-flex flex-column gap-7 fw-light">
+                <p class="mb-0">In cooperation with the Saudi Data and Artificial Intelligence Authority (SDAIA) and Tuwaiq Academy, Misk Schools has officially opened  the Fourth Industrial Revolution Center (Atheer), with the goal of developing a generation of future leaders among its male and female students.</p>
+                <p class="mb-0">The Center will provide quality scientific programmes that equip students with knowledge and skills in emerging modern digital fields such as artificial intelligence, programming, cyber security, robots and drones.</p>
+                <p class="mb-0">The inauguration ceremony was held at the SDAIA headquarters in Riyadh and was attended by: His Excellency President of SDAIA, Dr Abdullah bin Sharaf Al-Ghamdi; His Excellency Chairman of the Misk Schools Board, Dr Mohammad Al Hayaza; and a number of top officials from SDAIA and Misk Schools.</p>
+                <p class="mb-0">The Center seeks to create a generation capable of leading the future and contributing to the ambition of Saudi Vision 2030 for the Kingdom to become a leading nation in emerging and modern technology, programming and artificial intelligence.</p>
+                <p class="mb-0">Its educational programmes will augment the school's STEM curriculum, enabling students to obtain professional certifications in digital fields, participate in international competitions, and network with digital communities across the globe.</p>
+                <p class="mb-0">Programmes are open to male and female students of all educational levels, blending in-person training courses with distance-based ones, in order to maximise knowledge and skills and provide integrated digital labs that encourage students to practise their high-tech hobbies.</p>
+            </div>
+            </div>
+
+            <!-- List block -->
+            <div class="d-flex flex-column gap-7">
+            <h3>Courses include:</h3>
+            <ul class="ps-10 ps-md-12">
+                <li class="fw-light mb-4">Robotics: training that uses interactive robot coding, introduces students to computer science, coding concepts and computational thinking, and provides them with basic information on designing and building robots. </li>
+                <li class="fw-light mb-4">Cyber Security: aims to develop cyber security thinking skills by teaching students to identify social engineering, encryption basics and ethical hacking, as well as engaging them in important challenges  such as Capture the Flag (CTF), to raise their awareness of personal and national data security issues.  </li>
+                <li class="fw-light mb-4">Drones: covers the concepts of drone technology and the engineering and scientific principles related to it. Students are  introduced to drone parts and systems, methods of controlling drones through programming, and the best operational practices. </li>
+                <li class="fw-light mb-4">Artificial Intelligence (AI): introduces AI and machine learning, shedding light on the effect these will have on our world. Students are equipped with the knowledge required  to build their own projects using mass-based programming and the high-level programming language, Python.</li>
+                <li class="fw-light mb-4">Artificial Intelligence (AI): introduces AI and machine learning, shedding light on the effect these will have on our world. Students are equipped with the knowledge required  to build their own projects using mass-based programming and the high-level programming language, Python.</li>
+            </ul>
+            <div class="d-flex flex-column gap-7 fw-light">
+                <p class="mb-0">The Center has secured a number of strategic partnerships with specialised educational institutions and pioneering technology companies in order to help students obtain professional global qualifications, as well as participate in intensive camps, international events and competitions.</p>
+                <p class="mb-0">In support of this, the Center will continue to proactively connect with tech communities and engage talented individuals and organisations. It will also offer guidance to students, helping them to choose the programmes and professional certifications that fit their skills and interests.</p>
+            </div>
+            </div>
+
+            <!-- Divider + timestamp -->
+            <div class="d-flex flex-column gap-3">
+            <hr>
+            <p class="mb-0 fw-light date">Last Updated: 18/1/2023</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+      <!-- ---------------carousel---------------------- -->
+
+    <div class="overflow-x-hidden d-flex flex-column gap-7 gap-md-9 mt-12 mt-md-13 justify-content-center">
+    <h2 class="mx-auto">Featured News</h2>
+
+    <div class="news-slider justify-content-center w-100"> <!-- slick class -->
+
+      <!-- --------------card component----------------- -->
+
+      <div class="news-card position-relative d-flex flex-column gap-3 px-3">
+        <div class="news-card-inner">
+          <div class="news-image-wrap position-relative overflow-hidden rounded-3">
+            <img src="../img/img3.png" class="w-100 h-100 object-fit-cover d-block" alt="">
+            <span class="news-date date bg-primary text-white rounded-pill py-1 px-4">May 15, 2023</span>
+          </div>
+          <h3 class="text-dark mt-5 mt-md-9">Safe guarding Forums puts Safety First in Saudi Schools</h3>
+          <a class="more-link stretched-link" href="#">
+            <span class="more-link-text">Read More</span>
+            <img class="more-link-icon" src="../img/Text_Arrow.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+      <!-- --------------card component----------------- -->
+
+      <div class="news-card position-relative d-flex flex-column gap-3 px-3">
+        <div class="news-card-inner">
+          <div class="news-image-wrap position-relative overflow-hidden rounded-3">
+            <img src="../img/img2.png" class="w-100 h-100 object-fit-cover d-block" alt="">
+            <span class="news-date date bg-primary text-white rounded-pill py-1 px-4">May 15, 2023</span>
+          </div>
+          <div> <!-- --- -->
+            <h3 class="text-dark mt-5 mt-md-9">SPACE 2101: Inspiring the Scientists of Tomorrow to Re-imagine and Re-engineer the Future</h3>
+            <a class="more-link stretched-link" href="#">
+              <span class="more-link-text">Read More</span>
+              <img class="more-link-icon" src="../img/Text_Arrow.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------card component----------------- -->
+
+      <div class="news-card position-relative d-flex flex-column gap-3 px-3">
+        <div class="news-card-inner">
+          <div class="news-image-wrap position-relative overflow-hidden rounded-3">
+            <img src="../img/img1.png" class="w-100 h-100 object-fit-cover d-block" alt="">
+            <span class="news-date date bg-primary text-white rounded-pill py-1 px-4">May 15, 2023</span>
+          </div>
+          <h3 class="text-dark mt-5 mt-md-9">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</h3>
+          <a class="more-link stretched-link" href="#">
+            <span class="more-link-text">Read More</span>
+            <img class="more-link-icon" src="../img/Text_Arrow.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- -------------- Arrows ----------------- -->
+        <!-- The html for the arrows are in news-carousel.js-->
+    <div class="news-arrows"> </div>
+
+    <!-- ---------See All News Button----------- -->
+
+    <button class="btn btn-primary mx-auto px-5 py-4 px-md-8 py-md-5 rounded-pill">See All News</button>
+
+</div>
+
+
+
+    
+    <!-- --------------- Footer ----------------- -->
+
+    <footer>
+    <!-- Grid container -->
+    <div class="container-fluid bottom-0 text-white p-0 bg-primary mt-12 mt-lg-13">
+      <section>
+        <div class="row mx-0">
+            <div class="col-12 col-md-7 py-9 py-md-12 px-9 px-md-12 px-lg-14">
+                <div class="row justify-content-between flex-nowrap">
+                    <div class="col-6 col-md-auto text-white">
+                        <p><a href="#" class="link-light hover-link">About Us</a></p>
+                        <p><a href="#" class="link-light hover-link">Admissions</a></p>
+                        <p><a href="#" class="link-light hover-link">Learning Journey</a></p>
+                        <p><a href="#" class="link-light hover-link">Work With Us</a></p>
+                        <p><a href="#" class="link-light hover-link">News &amp; Media</a></p>
+                    </div>
+
+                    <div class="col-6 col-md-auto">
+                        <p><a href="#" class="link-light hover-link">Apply</a></p>
+                        <p><a href="#" class="link-light hover-link">Schedule a Visit</a></p>
+                        <p><a href="#" class="link-light hover-link">Contact Us</a></p>
+                        <p><a href="#" class="link-light hover-link">!LINK!</a></p>
+                        <p><a href="#" class="link-light hover-link">!LINK!</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 align-items-center gap-5 mt-md-9">
+                        <img src="../img/Logos/CIS Logo-02 1.svg" class="footer-logo" alt="CIS We Are An Accredited School">
+                        <img src="../img/Logos/World_School_Logo.svg"  class="footer-logo" alt="IB">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-5 p-0 position-relative overflow-hidden d-none d-md-block ">
+                <img class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover footer-img" src="../img/img6.png" alt="">
+            </div>
+        </div>
+      </section>
+
+      <!-- Section: Copyright -->
+        <section class="px-5 px-md-14 py-9 bg-primary-emphasis">
+            <div class="row g-0 align-items-center">
+
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start gap-5 mb-5 mb-md-0">
+                <a href="#" class="footer-social-link">
+                    <img src="../img/Social-Links/social-facebook.svg" class="social-link" alt="Facebook">
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="../img/Social-Links/social-instagram.svg" class="social-link" alt="Instagram">
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="../img/Social-Links/social-linkedin.svg" class="social-link" alt="LinkedIn">
+                </a>
+                <a href="#" class="footer-social-link">
+                    <img src="../img/Social-Links/social-x.svg" class="social-link" alt="X">
+                </a>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex flex-wrap justify-content-center justify-content-md-end gap-5 text-dark">
+                    <a href="#" class="hover-link footer-conditions-link link-underline link-underline-opacity-0 text-dark">Privacy Policy</a>
+                    <a href="#" class="hover-link footer-conditions-link link-underline link-underline-opacity-0 text-dark">Terms &amp; Conditions</a>
+                    <span class="footer-conditions-link">&#169;Copyright MISK 2023-2024. All Rights Reserved</span>
+                </div>
+
+            </div>
+        </section>
+    </div>
+  </footer>
+
+ 
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/utilities.js"></script>
+  <script src="../js/news-carousel.js"></script>
+
+  </body>
+</html>

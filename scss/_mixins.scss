@@ -1,0 +1,6 @@
+@mixin responsive-text($desktop, $mobile, $weight: null, $line-height: null) {
+  font-size: $desktop;
+  @if $weight      { font-weight: $weight; }
+  @if $line-height { line-height: $line-height; }
+  @include media-breakpoint-down(md) { font-size: $mobile; }
+}
