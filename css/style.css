@@ -18166,6 +18166,39 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   max-width: 45%;
 }
 
+.footer-bleed {
+  display: grid;
+  grid-template-columns: 1fr 100% 1fr;
+}
+@media (min-width: 768px) {
+  .footer-bleed {
+    grid-template-columns: max(0px, (100% - 720px) / 2) minmax(0, 420px) 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .footer-bleed {
+    grid-template-columns: max(0px, (100% - 960px) / 2) minmax(0, 560px) 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-bleed {
+    grid-template-columns: max(0px, (100% - 1140px) / 2) minmax(0, 665px) 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .footer-bleed {
+    grid-template-columns: max(0px, (100% - 1320px) / 2) minmax(0, 770px) 1fr;
+  }
+}
+
+.footer-bleed-text {
+  grid-column: 2;
+}
+
+.footer-bleed-image {
+  grid-column: 3;
+}
+
 .hover-link {
   text-decoration: none;
   white-space: nowrap;
@@ -18212,19 +18245,19 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   inset: 0;
   background-color: #DBEAE6;
 }
+
 .node-banner.has-image::before {
-  bottom: 32%;
+  bottom: 30%;
 }
 .node-banner:not(.has-image)::before {
   bottom: 21px;
 }
-.node-banner > * {
+.node-banner > div > * {
   position: relative;
   z-index: 1;
 }
 
 .node-banner-image {
-  width: 85%;
   height: 34.75rem;
 }
 @media (max-width: 767.98px) {
@@ -18238,6 +18271,16 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   .node-banner-image {
     height: 18rem;
   }
+}
+
+.bleed-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: -100vw;
+  background-color: inherit;
 }
 
 .table-hover > tbody > tr > td {

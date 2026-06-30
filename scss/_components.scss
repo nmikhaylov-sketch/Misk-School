@@ -227,11 +227,33 @@
 
 .partner-cell:hover img{transform: scale(1.05);}
 
+
+//footer-----------------
+
+
 .footer-logo{
   height: 3.2rem;
   width: auto;
   max-width: 45%;
 }
+//https://www.joshwcomeau.com/css/full-bleed/
+.footer-bleed {
+  display: grid;
+  grid-template-columns: 1fr 100% 1fr; // mobile: single column
+  // bp => md and max-width => 720. etc
+  @each $bp, $max-width in (md: 720px, lg: 960px, xl: 1140px, xxl: 1320px) {
+    @include media-breakpoint-up($bp) {
+      grid-template-columns:
+        max(0px, calc((100% - #{$max-width}) / 2))  
+        minmax(0, #{floor($max-width * 7 / 12)})    
+        1fr;                                         
+    }
+  }
+}
+
+.footer-bleed-text  { grid-column: 2; }
+.footer-bleed-image { grid-column: 3; }
+
 
 .hover-link {
   text-decoration: none;
@@ -272,26 +294,25 @@
     background-position: top right;
 }
 
-.node-banner {
-  &::before {
+.node-banner::before {
     content: '';
     position: absolute;
     inset: 0;
     background-color: $tertiary-emphasis;
-  }
+}
 
+.node-banner {
   // if an image has a "has-image" class the tertiary bg fills to have the image
-  &.has-image::before { bottom: 32%; }
+  &.has-image::before { bottom: 30%; }
 
   // if no "has-image" class the tertiary bg ends at the center of the info bar
   &:not(.has-image)::before { bottom: 21px; }
 
   // Keep all children above the bg pseudo-element
-  > * { position: relative; z-index: 1; }
+  > div > * { position: relative; z-index: 1; }
 }
 
 .node-banner-image {         
-  width: 85%;  
   height: 34.75rem;              
 
   @include media-breakpoint-down(md) {
@@ -300,6 +321,17 @@
     height: 25rem;
   }
   @include media-breakpoint-down(sm) {height: 18rem;}
+}
+//lets the the info bar to extend beyond its container
+
+.bleed-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;  
+    left: -100vw;  
+    background-color: inherit; 
 }
 
 //-----------------Table-------------------------
