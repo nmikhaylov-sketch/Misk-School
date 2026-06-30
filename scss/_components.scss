@@ -124,14 +124,6 @@
   }
 }
 
-.hero-padding {
-  margin: 0rem 9.38rem 5rem;
-
-  @include media-breakpoint-down (md) {
-      margin: 0rem 0.94rem 3.13rem;
-  }
-}
-
 
 .hero-image-height {height: 61rem;}
 
@@ -312,7 +304,8 @@
   > div > * { position: relative; z-index: 1; }
 }
 
-.node-banner-image {         
+.node-banner-image {  
+  width: 85%;       
   height: 34.75rem;              
 
   @include media-breakpoint-down(md) {
