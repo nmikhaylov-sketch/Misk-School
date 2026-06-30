@@ -1,15 +1,21 @@
 .hero-title {
   @include font-size(4.25rem);
-  font-weight: 800;
-  line-height: 140%;
+  @include responsive-text(4.25rem, 2.625rem, 800, 140%);
   max-width: 47.625rem;
   margin-bottom: 1.875rem;
 
   @include media-breakpoint-down(md) {
-    @include font-size(2.625rem); 
-    align-self: stretch;
     max-width: none;
     text-align: left;
+  }
+  // keep the text reasonable when in landscape mode on mobile
+  @media (orientation: landscape) and (max-height: 500px) {
+    font-size: 2.625rem;
+    max-width: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
 }
 

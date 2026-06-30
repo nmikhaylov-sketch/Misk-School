@@ -1,6 +1,7 @@
-
 //Makes the scrollbar invisible
 ::-webkit-scrollbar { display: none; }
+
+
 
 // The code for the image hover effect
 //as well as making the sides smaller than the current image
@@ -10,6 +11,7 @@
   height: min(45vh, 25vw); 
   transition: height 0.4s ease;
 
+  //Darkens the image when hovered over
   &::after {
     content: '';
     position: absolute;
@@ -17,13 +19,14 @@
     opacity: 0;
     background-color: rgba($primary, 0.2);
     pointer-events: none;
-    transition: opacity 0.4s ease;  // ← was missing, overlay was popping not fading
+    transition: opacity 0.4s ease;  
   }
   @include media-breakpoint-down (lg) {
     height: 30vh;
   }
 }
 
+// Makes the the primary overlay appear
 .news-card:hover .news-image-wrap::after {opacity: 1;}
 
 .news-image-wrap img {
@@ -36,12 +39,11 @@
 
 .news-card:hover .news-image-wrap img{transform: scale(1.1);}
 
-
 //makes the news image on the side smaller than the current image
 
 .slick-current .news-image-wrap {
   //min picks the smaller screen value to help differentiate between ipads and desktops
-  height: min(70vh, 40vw);
+  height: min(60vh, 40vw);
   @include media-breakpoint-down (lg) {
     height: 40vh;
   }
@@ -50,9 +52,10 @@
 // min-height to keep the div under in its
 .news-slider {
   //min picks the smaller screen value to help differentiate between ipads and desktops
-  min-height: calc(min(70vh, 40vw) + 7rem); 
+  height: calc(min(60vh, 40vw) + 14rem); 
+  overflow: hidden;
   @include media-breakpoint-down (lg) {
-    min-height: calc(40vh + 9rem);
+    height: calc(40vh + 16rem);
   }
 }
 
@@ -74,7 +77,6 @@
 }
 
 .news-card h3 {
-  min-height: 2lh;
   max-height: 3lh;
   overflow: hidden;
 }
@@ -115,6 +117,11 @@
   @include media-breakpoint-down (md) {
     height: 100vh;
   }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    height: 100vh;
+   
+  }
 }
 
 .hero-padding {
@@ -135,19 +142,13 @@
   [data-bs-target] {
     width: 14px;
     height: 18px;
+    //makes the indicators closer together
     margin: 0;
     background-color: transparent;
     background-image: url('../img/Hero_Indicator.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top: none;
-    border-bottom: none;
-    padding: 0;
     opacity: 1;
     &.active {
       background-image: url('../img/Hero_Indicator_Active.svg');
-      opacity: 1;
     }
   }
 }
@@ -155,8 +156,8 @@
 // gives the hero slider a slight gradiant 
 .hero-overlay {background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, rgba(0,0,0,0.5) 73%);}
 
-// --- Stat Card col ---
 
+// --- Stat Card col -----------------------
 .stat-col {
   gap: 0.9375rem;        
   width: 16.25rem;   
@@ -164,7 +165,6 @@
     width: 100%;            
   }
 }
-
 
 // adds the proper styling and animation to any link
 .more-link {
@@ -184,10 +184,9 @@
     &.icon-swapped { transform: translateX(calc(-1 * var(--text-w))); }
   }
 }
-
 .more-link:hover {text-decoration: none;}
 
-
+// ------------Info Image-----------------
 .info-image-col {
   min-height: 18rem;    
   max-height: 50rem;      
@@ -197,6 +196,7 @@
   }
 }
 
+//makes the arrows match the primary color
 .mix-blend {mix-blend-mode: color-dodge;}
 
 .text-justify {text-align: justify !important;}
@@ -299,12 +299,8 @@
     width: 100%;
     height: 25rem;
   }
-
-  @include media-breakpoint-down(sm) {
-    height: 18rem;
-  }
+  @include media-breakpoint-down(sm) {height: 18rem;}
 }
-
 
 //-----------------Table-------------------------
 //add the table hover effect---------------------

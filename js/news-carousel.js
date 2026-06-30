@@ -5,7 +5,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     infinite: true,
     centerMode: true,
-    centerPadding: '24%',
+    centerPadding: '22%',
     speed: 500,
     arrows: true,
     appendArrows: $('.news-arrows'),
@@ -18,7 +18,7 @@ $(document).ready(function () {
         centerPadding: '6%',
       }
     } ]
-  
+  // stops the slides from suddenly chnages height when going from left to right
   }).on('beforeChange', (event, slick, currentSlide, nextSlide) => {
         if (currentSlide !== nextSlide) {
           document.querySelectorAll('.slick-center + .slick-cloned').forEach((next) => {

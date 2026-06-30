@@ -11,6 +11,7 @@
     <body>
          
     <!-- -------------Header------------- -->
+
     <header class="">
      <nav class="navbar navbar-header position-absolute end-0 top-0 p-0">
             <!-- -------------Visible logo and Hamburger menu------------ -->
@@ -19,13 +20,13 @@
                     <img src="../img/Type=Light.svg" class="misk-logo">
                 </a>
 
-                <button class="navbar-toggler border-0 p-0 m-0 hamburger-icon Z-3" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
+                <button class="navbar-toggler border-0 p-0 m-0 hamburger-icon z-2" data-bs-toggle="collapse" data-bs-target="#toggleTarget">
                     <img src="../img/Burger_Menu.svg" class="hamburger-icon">
                 </button>
 
 
                 <!-- --------------Collapsed menu---------- -->
-                <div class="collapse position-absolute w-100 limit-menu-height bg-primary z-2" id="toggleTarget">
+                <div class="collapse position-absolute w-100 limit-menu-height bg-primary z-3" id="toggleTarget">
                     <div class="d-flex flex-column h-100 px-3 pt-2 pe-5">
                         <!-- -----------The close menu button------------ -->
                         <button class="btn border-0 bg-transparent py-4 px-5 text-primary-emphasis hero-body ms-auto" data-bs-toggle="collapse" data-bs-target="#toggleTarget" aria-label="Close menu">
@@ -157,6 +158,7 @@
 
         <!-- ---------------Hero Slide----------------- -->
 
+
         <div id="heroSlide" class="carousel slide" data-bs-ride="carousel"> 
             <div class="carousel-indicators hero-padding d-flex justify-content-start z-1">
                 <button type="button" data-bs-target="#heroSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -190,13 +192,21 @@
                 </div>
 
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroSlide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroSlide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
             <!-- ---------------Stat Card----------------- -->
 
 
-        <div class="px-5 px-md-0">
-            <div class="container d-flex flex-column align-items-center bg-primary text-white mt-12 py-9 mt-md-13 py-md-12 rounded-4">
+        <div class="container">
+            <div class="px-5 px-md-0 d-flex flex-column align-items-center bg-primary text-white mt-12 py-9 mt-md-13 py-md-12 rounded-4">
                 <p class="h2 fw-bold">At a Glance</p>
                 <div class="d-flex flex-column flex-md-row justify-content-center w-100 mt-9 gap-10 gap-md-13">
 
@@ -220,7 +230,7 @@
 
         <!-- ---------------carousel---------------------- -->
 
-    <div class="overflow-x-hidden d-flex flex-column gap-7 gap-md-9 mt-12 mt-md-13 justify-content-center">
+    <section class="overflow-x-hidden d-flex flex-column gap-7 gap-md-9 mt-12 mt-md-13 justify-content-center">
         <h2 class="mx-auto">Featured News</h2>
 
         <div class="news-slider justify-content-center w-100"> <!-- slick class -->
@@ -286,7 +296,7 @@
 
         <button class="btn btn-primary mx-auto px-5 py-4 px-md-8 py-md-5 rounded-pill">See All News</button>
 
-    </div>
+    </section>
 
 
 
