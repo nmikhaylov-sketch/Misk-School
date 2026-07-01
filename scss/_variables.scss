@@ -37,6 +37,13 @@ $alert-error:  #B02A37 !default;
 $alert-warning: #FFCD39!default;
 $alert-error:  #B02A37 !default;
 
+$primary-text-emphasis:      $primary-emphasis !default;
+$primary-text-emphasis-dark: $primary-emphasis !default;
+
+$secondary-text-emphasis:      $secondary-emphasis !default;
+$secondary-text-emphasis-dark: $secondary-emphasis !default;
+
+
 
 $table-hover-bg: $tertiary-emphasis;
 $table-hover-color: $primary;
@@ -72,9 +79,9 @@ $headings-font-weight: 800;
 $headings-line-height: 1.4;
 
 
+
 // primary-emphasis class utilities
-.text-primary-emphasis { color: $primary-emphasis !important; }
-.bg-primary-emphasis   { background-color: $primary-emphasis !important; }
+
 .bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
 
 .table-tertiary-emphasis {
