@@ -1,12 +1,15 @@
 
 //Adds an animation to a Read More/Learn More link when hovered over
 document.querySelectorAll('.more-link').forEach((link) => {
+  //find the icon and text elements within the link
   const icon = link.querySelector('.more-link-icon');
   const text = link.querySelector('.more-link-text');
-
+  
+  //set the width of the text and icon as CSS variables so they can be used in the CSS for the animation
   link.style.setProperty('--text-w', (text.offsetWidth + 5) + 'px');
   link.style.setProperty('--icon-w', (icon.offsetWidth + 5) + 'px');
 
+  //add event listeners to the link for mouse enter and leave events
   link.addEventListener('mouseenter', () => {
     icon.className = 'more-link-icon icon-swapped';
     text.className = 'more-link-text text-swapped';
@@ -16,7 +19,7 @@ document.querySelectorAll('.more-link').forEach((link) => {
     text.className = 'more-link-text';
   });
 });
-
+//-------------------------------------------------------------------------------
 // animates the numbers to increase gradually when loaded,
 //  found on https://codepen.io/lucamurante/pen/gZVymW
 function animateValue(obj, start = 0, end = null, duration = 800) {
@@ -51,7 +54,6 @@ function animateValue(obj, start = 0, end = null, duration = 800) {
     }
 }
 
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -61,14 +63,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
-
 document.querySelectorAll('.animate-number').forEach(el => observer.observe(el));
-
+//--------------------------------------------------------------------------------------
 
 //Locks scroll when the mobile menu is open, and unlocks it when closed
 const menu = document.getElementById('toggleTarget');
-
-if (menu) { const mobileMenu = window.matchMedia('(max-width: 767.98px), (orientation: landscape) and (max-height: 500px)'
+// check if it exists, because this script is used on multiple pages and not all of them have a mobile menu
+if (menu) { const mobileMenu = window.matchMedia('(max-width: 767.99px), (orientation: landscape) and (max-height: 500px)'
   );
 
 menu.addEventListener('show.bs.collapse', () => {

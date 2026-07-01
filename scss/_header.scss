@@ -29,7 +29,7 @@
 }
 //gives the menu a set height on desktop and makes it take full screen height on mobile
 .limit-menu-height {
-  height: 60vh;
+  height: 80vh;
   @include media-breakpoint-down(md) {height: 100vh;}
    //fixes the menu for phones in landscape mode
   @media (orientation: landscape) and (max-height: 500px) {height: 100vh;}

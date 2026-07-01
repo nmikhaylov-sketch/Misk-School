@@ -13,7 +13,7 @@
 
 .news-image-wrap {
   //min picks the smaller screen value to help differentiate between ipads and desktops
-  height: min(45vh, 25vw); 
+  height: min(40vh, 25vw); 
   transition: height 0.4s ease;
 
   //Darkens the image when hovered over
@@ -47,14 +47,14 @@
 
 .slick-current .news-image-wrap {
   //min picks the smaller screen value to help differentiate between ipads and desktops
-  height: min(60vh, 40vw);
+  height: min(50vh, 40vw);
   @include media-breakpoint-down (lg) {
     height: 40vh;
   }
 }
 
 .news-slider {
-  height: calc(min(60vh, 40vw) + 11rem); 
+  height: calc(min(50vh, 40vw) + 11rem); 
   overflow: hidden;
   @include media-breakpoint-down (lg) {
     height: calc(40vh + 8rem);
@@ -81,11 +81,12 @@
     bottom: 0.9375rem;
   }
 }
-
+//sets the max height for the news card title and hides any overflow text
 .news-card h3 {
   max-height: 3lh;
   overflow: hidden;
 }
+
 
 // responcible for the prev and next arrow designs
 .news-arrows {
@@ -96,26 +97,23 @@
 
   .slick-prev,
   .slick-next {
-    transform: none !important;
+    transform: none;
     width: 2.1875rem;                 
     height: 2.1875rem;
     background-color: $primary;
     color: white;
     border: none;
-    &:before { content: none; }      // remove slick's font icon
-    &:hover {
-      background-color: $primary-emphasis;
-    }
+    // remove slick's font icon
+    &:before { content: none; }      
+    &:hover { background-color: $primary-emphasis; }
     img {
-      width: 50%;
+      width: 70%;
       height: auto;
-      display: block;
       filter: invert(1);
-
     }
   }
 }
-//-----------------------------------------------------------
+//Heroslider-----------------------------------------------
 
 // resposible for the Hero Slider Specs.
 .hero-carousel-height{
@@ -182,6 +180,7 @@
     &.icon-swapped { transform: translateX(calc(-1 * var(--text-w))); }
   }
 }
+
 .more-link:hover {text-decoration: none;}
 
 // ------------Info Image-----------------
@@ -194,20 +193,8 @@
   }
 }
 
-//makes the arrows match the primary color
-.mix-blend {mix-blend-mode: color-dodge;}
-
 .text-justify {text-align: justify !important;}
 
-.info-deco {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  mix-blend-mode: color-dodge;
-  pointer-events: none;
-}
 
 .partner-cell {
   aspect-ratio: 1 / 1;     
@@ -228,12 +215,12 @@
 
 //footer-----------------
 
-
 .footer-logo{
   height: 3.2rem;
   width: auto;
   max-width: 45%;
 }
+
 //https://www.joshwcomeau.com/css/full-bleed/
 .footer-bleed {
   display: grid;
@@ -291,6 +278,8 @@
     mix-blend-mode: color-dodge;
     background-position: top right;
 }
+
+//News node---------------------------------------------------- 
 
 .node-banner::before {
     content: '';

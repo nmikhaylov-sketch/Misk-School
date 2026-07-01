@@ -1,6 +1,5 @@
 .hero-title {
   @include font-size(4.25rem);
-  @include responsive-text(4.25rem, 2.625rem, 800, 140%);
   max-width: 47.625rem;
   margin-bottom: 1.875rem;
 

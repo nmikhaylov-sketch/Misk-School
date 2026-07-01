@@ -17575,20 +17575,12 @@ textarea.form-control-lg {
 }
 .hero-title {
   font-size: calc(1.55rem + 3.6vw);
-  font-size: 4.25rem;
-  font-weight: 800;
-  line-height: 140%;
   max-width: 47.625rem;
   margin-bottom: 1.875rem;
 }
 @media (min-width: 1200px) {
   .hero-title {
     font-size: 4.25rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .hero-title {
-    font-size: 2.625rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -17812,7 +17804,7 @@ ul li::marker {
 }
 
 .limit-menu-height {
-  height: 60vh;
+  height: 80vh;
 }
 @media (max-width: 767.98px) {
   .limit-menu-height {
@@ -17935,7 +17927,7 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
 }
 
 .news-image-wrap {
-  height: min(45vh, 25vw);
+  height: min(40vh, 25vw);
   transition: height 0.4s ease;
 }
 .news-image-wrap::after {
@@ -17970,7 +17962,7 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
 }
 
 .slick-current .news-image-wrap {
-  height: min(60vh, 40vw);
+  height: min(50vh, 40vw);
 }
 @media (max-width: 991.98px) {
   .slick-current .news-image-wrap {
@@ -17979,7 +17971,7 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
 }
 
 .news-slider {
-  height: calc(min(60vh, 40vw) + 11rem);
+  height: calc(min(50vh, 40vw) + 11rem);
   overflow: hidden;
 }
 @media (max-width: 991.98px) {
@@ -18024,7 +18016,7 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
 }
 .news-arrows .slick-prev,
 .news-arrows .slick-next {
-  transform: none !important;
+  transform: none;
   width: 2.1875rem;
   height: 2.1875rem;
   background-color: #00372A;
@@ -18041,9 +18033,8 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
 }
 .news-arrows .slick-prev img,
 .news-arrows .slick-next img {
-  width: 50%;
+  width: 70%;
   height: auto;
-  display: block;
   filter: invert(1);
 }
 
@@ -18128,22 +18119,8 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   }
 }
 
-.mix-blend {
-  mix-blend-mode: color-dodge;
-}
-
 .text-justify {
   text-align: justify !important;
-}
-
-.info-deco {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  mix-blend-mode: color-dodge;
-  pointer-events: none;
 }
 
 .partner-cell {
