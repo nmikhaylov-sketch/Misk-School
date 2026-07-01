@@ -47,7 +47,7 @@ $table-hover-color: $primary;
 
 $font-size-base: 1.125rem;
 $font-family-base: 'Codec Pro', sans-serif;
-
+$btn-border-radius:  1.875rem !default;
 // Display
 $display-font-sizes: (
   1: 3.75rem,
@@ -72,7 +72,7 @@ $headings-font-weight: 800;
 $headings-line-height: 1.4;
 
 
-// add the primary-emphasis class utilities
+// primary-emphasis class utilities
 .text-primary-emphasis { color: $primary-emphasis !important; }
 .bg-primary-emphasis   { background-color: $primary-emphasis !important; }
 .bg-tertiary-emphasis   { background-color: $tertiary-emphasis !important; }
@@ -84,6 +84,7 @@ $headings-line-height: 1.4;
   --bs-table-hover-bg: $tertiary-emphasis;
 }
 
+// -----------------Bootstrap Overrides--------------------
 $enable-negative-margins: true;
 
 $carousel-control-prev-icon-bg:  none;
