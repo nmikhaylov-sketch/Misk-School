@@ -17852,11 +17852,18 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   opacity: 1;
 }
 
+.nav-link[aria-expanded=true] .nav-arrow-wrap .arrow-down {
+  opacity: 0;
+}
+.nav-link[aria-expanded=true] .nav-arrow-wrap .arrow-up {
+  opacity: 1;
+}
+
 @keyframes nav-link-flash {
-  0% {
+  from {
     color: #999999;
   }
-  100% {
+  to {
     color: white;
   }
 }
@@ -17866,7 +17873,7 @@ ul:has(.nav-link[aria-expanded=true]) .nav-link[aria-expanded=false] {
   position: relative;
   transition: transform 0.3s ease;
 }
-.nav-link-hover:focus, .nav-link-hover:active {
+.nav-link-hover:focus {
   color: white !important;
 }
 .nav-link-hover::after {

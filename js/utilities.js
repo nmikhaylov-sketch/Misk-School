@@ -51,6 +51,7 @@ function animateValue(obj, start = 0, end = null, duration = 800) {
     }
 }
 
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -60,8 +61,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
+
 document.querySelectorAll('.animate-number').forEach(el => observer.observe(el));
 
+
+//Locks scroll when the mobile menu is open, and unlocks it when closed
 const menu = document.getElementById('toggleTarget');
 
 if (menu) { const mobileMenu = window.matchMedia('(max-width: 767.98px), (orientation: landscape) and (max-height: 500px)'

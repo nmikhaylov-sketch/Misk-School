@@ -58,10 +58,15 @@ ul:has(.nav-link[aria-expanded="true"]) .nav-link[aria-expanded="false"] {
   .arrow-down { opacity: 0; }
   .arrow-up   { opacity: 1; }
 }
+
+.nav-link[aria-expanded="true"] .nav-arrow-wrap {
+  .arrow-down { opacity: 0; }
+  .arrow-up   { opacity: 1; }
+}
 // Gives the gradual color transition when hovering
 @keyframes nav-link-flash {
-  0%   { color: shade-color(white, 40%); }
-  100% { color: white; }
+  from   { color: shade-color(white, 40%); }
+  to { color: white; }
 }
 
 .nav-link-hover {
@@ -70,8 +75,7 @@ ul:has(.nav-link[aria-expanded="true"]) .nav-link[aria-expanded="false"] {
   color: white;
 
   // needed because bootstrap hover overrides
-  &:focus,
-  &:active {
+  &:focus{
     color: white !important; 
   }
 
